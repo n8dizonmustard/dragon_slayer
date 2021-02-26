@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/153612201_10223213166090209_687952016593341034_o.jpg?_nc_cat=103&ccb=3&_nc_sid=0debeb&_nc_ohc=jA4R4Y1oApkAX_SJYe3&_nc_ht=scontent-sea1-1.xx&oh=649540bbad930efe068306206c146ff7&oe=605AD0C8);
+}
+h1 {
+    text-align: center;
+    font-size: 38px;
+    line-height: 50px;
+    color: red;
+    margin: 10px 0;
+    -webkit-text-stroke: 1px black;
+}
+h3 {
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin: 10px 0;
+    -webkit-text-stroke: 1px black;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 400px 200px;
+    justify-items: center;
+}
+#game {
+    background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/153612201_10223213166090209_687952016593341034_o.jpg?_nc_cat=103&ccb=3&_nc_sid=0debeb&_nc_ohc=jA4R4Y1oApkAX_SJYe3&_nc_ht=scontent-sea1-1.xx&oh=649540bbad930efe068306206c146ff7&oe=605AD0C8);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1200px;
+    height: 800px;
+    border: 10px solid black;
+}
+#event {
+    grid-column: span 2;
+    justify-self: center;
+    background-image: url(http://clipart-library.com/img/714805.png);
+}
+
+#cont, #start, #replay {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    padding: 5px 10px;
+    z-index: 2;
+    position: relative;
+    border: 7px outset gold;
+    background-color: black;
+    color: red;
+}
+#knight-hp {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    -webkit-text-stroke: 1px black;
+}
+#knight-hp-div {
+    background-image: url(http://clipart-library.com/img/1578912.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 200px;
+    opacity: 0.9;
+}
+#dragon-hp {
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 50px;
+    position: relative;
+    top: 50px;
+    -webkit-text-stroke: 1px black;
+}
+#dragon-hp-div {
+    background-image: url(http://clipart-library.com/img/1578912.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 200px;
+    opacity: 0.9;
+}
+#knight-sprite-div {
+    align-self: end;
+}
+#k-sprite {
+    height: 50%;
+    width: 50%;
+    transform: scaleX(-1);
+    position: relative;
+    top: 30px;
+    left: 200px;
+    z-index: 1;
+}
+#dragon-sprite {
+    grid-column: span 2;
+}
+#drg-sprite {
+    height: 130%;
+    width: 130%;
+    position: relative;
+    right: 200px;
+    z-index: 0;
+}
+#player-actions {
+    grid-column: span 4;
+}
+.player-action {
+    width: 125px;
+    height: 125px;
+    margin: 20px 40px 20px 40px;
+    z-index: 1;
+}
+#sword {
+    background-image: url(http://clipart-library.com/images_k/sword-transparent/sword-transparent-9.png);
+    background-size: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 10px outset maroon;
+    color: transparent;
+    background-color: red;
+    position: relative;
+    top: 10px;
+}
+#shield {
+    background-image: url(http://clipart-library.com/img1/1514023.png);
+    background-size: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 10px outset goldenrod;
+    color: transparent;
+    background-color: black; 
+    position: relative;
+    top: 10px;
+}
+#bow {
+    background-image: url(http://clipart-library.com/image_gallery2/Archery-Free-Download-PNG.png);
+    background-size: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 10px outset navy;
+    background-color: rgb(58, 58, 130);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+    color: yellow;
+    position: relative;
+    -webkit-text-stroke: 1px black;
+    position: relative;
+    top: 25px;
+}
+#potion {
+    background-image: url(http://clipart-library.com/images_k/potion-transparent/potion-transparent-3.png);
+    background-size: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 10px outset darkgreen;
+    background-color: rgb(48, 181, 181);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+    position: relative;
+    text-align: bottom;
+    -webkit-text-stroke: 1px black;
+    position: relative;
+    top: 25px;
+}
+#action-sprites {
+    align-self: end;
+}
+#fire-sprite {
+    width: 30%;
+    position: absolute;
+    bottom: 320px;
+    left: 330px;
+    z-index: -1;
+}
+#claws-sprite {
+    width: 10%;
+    opacity: 0.75;
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 320px;
+    left: 215px;
+    z-index: -1;
+}
+
+#bite-sprite {
+    width: 10%;
+    opacity: 0.75;
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 345px;
+    left: 215px;
+    z-index: -1;
+}
+#wind-sprite {
+    width: 23%;
+    transform: scaleX(-1);
+    opacity: 0.5;
+    position: absolute;
+    bottom: 305px;
+    left: 775px;
+    z-index: -1;
+}
+#sword-sprite {
+    width: 25%;
+    transform: scaleX(-1) rotate(60deg);
+    position: absolute;
+    bottom: 395px;
+    left: 625px;
+    z-index: -1;
+}
+#arrow-sprite {
+    width: 10%;
+    transform: rotate(137deg);
+    position: absolute;
+    bottom: 370px;
+    left: 550px;
+    z-index: -1;
+}
+#shield-sprite {
+    width: 8%;
+    position: absolute;
+    opacity: 0.75;
+    bottom: 320px;
+    left: 270px;
+    z-index: -1;
+}
+#potion-sprite {
+    width: 20%;
+    position: absolute;
+    opacity: 0.9;
+    transform: rotate(270deg) scaleX(-1);
+    bottom: 315px;
+    left: 150px;
+    z-index: -1;
+}
+#tombstone-k {
+    width: 10%;
+    position: absolute;
+    bottom: 300px;
+    left: 225px;
+    z-index: -1;
+}
+#tombstone-d {
+    width: 10%;
+    position: absolute;
+    bottom: 300px;
+    right: 450px;
+    z-index: -1;
+}
+#potion-text, #bow-text, #shield-text, #sword-text, #knight-text, #dead-dragon-text, #dead-knight-text {
+    position: absolute;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 15px;
+    z-index: -1;
+}
+#potion-text {
+    background-color: rgb(48, 181, 181);
+    left: 30px;
+    bottom: 175px;
+    width: 155px;
+}
+#bow-text {
+    color: white;
+    background-color: rgb(58, 58, 130);
+    left: 375px;
+    bottom: 275px;
+    width: 175px;
+}
+#shield-text {
+    color: goldenrod;
+    background-color: black;
+    left: 660px;
+    bottom: 275px;
+    width: 175px;
+}
+#sword-text {
+    color: white;
+    background-color: maroon;
+    left: 1025px;
+    bottom: 175px;
+    width: 145px;
+}
+#knight-text {
+    color: black;
+    background-color: white;
+    left: 200px;
+    bottom: 475px;
+    width: 100px;
+}
+#dead-knight-text {
+    color: black;
+    background-color: white;
+    left: 100px;
+    bottom: 350px;
+    width: 100px;
+}
+#dead-dragon-text {
+    color: black;
+    background-color: white;
+    right: 320px;
+    bottom: 350px;
+    width: 100px;
+}
